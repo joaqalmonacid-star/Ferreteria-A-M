@@ -2,11 +2,7 @@
 <html lang="es-CL">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5LPT6KPC');</script>
+
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -692,51 +688,117 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
+
+
+
+
+
+
+
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+(function(){
+  function ready(fn){
+    if(document.readyState !== 'loading'){ fn(); } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  ready(function(){
+    var btnRegister = document.getElementById('btnRegister');
+    var registerModal = document.getElementById('registerModal');
+    var registerClose = document.getElementById('registerClose');
+    var registerCancel = document.getElementById('registerCancel');
+    var registerBackdrop = document.getElementById('registerBackdrop');
+    var registerForm = document.getElementById('registerForm');
+    var correoInput = document.getElementById('correo');
+    var confirmEmailField = document.getElementById('confirmEmailField');
 
-  const btnRegister = document.getElementById('btnRegister');
-  const registerModal = document.getElementById('registerModal');
-  const registerClose = document.getElementById('registerClose');
-  const registerCancel = document.getElementById('registerCancel');
-  const registerBackdrop = document.getElementById('registerBackdrop');
-  const registerForm = document.getElementById('registerForm');
-  const correoInput = document.getElementById('correo');
-  const confirmEmailField = document.getElementById('confirmEmailField');
+    function openRegister(){ if(registerModal) registerModal.classList.add('is-open'); }
+    function closeRegister(){ if(registerModal) registerModal.classList.remove('is-open'); }
 
-  const openRegister = () => registerModal.classList.add('is-open');
-  const closeRegister = () => registerModal.classList.remove('is-open');
+    if(btnRegister) btnRegister.addEventListener('click', openRegister);
+    if(registerClose) registerClose.addEventListener('click', closeRegister);
+    if(registerCancel) registerCancel.addEventListener('click', closeRegister);
+    if(registerBackdrop) registerBackdrop.addEventListener('click', closeRegister);
 
-  btnRegister?.addEventListener('click', openRegister);
-  registerClose?.addEventListener('click', closeRegister);
-  registerCancel?.addEventListener('click', closeRegister);
-  registerBackdrop?.addEventListener('click', closeRegister);
+    if(registerForm){
+      registerForm.addEventListener('submit', function(){
+        if(correoInput && confirmEmailField){
+          confirmEmailField.value = correoInput.value;
+        }
+      });
+    }
 
-  registerForm?.addEventListener('submit', (e) => {
-    if (correoInput?.value) {
-      confirmEmailField.value = correoInput.value;
+    var btnLogin = document.getElementById('btnLogin');
+    var loginModal = document.getElementById('loginModal');
+    var loginClose = document.getElementById('loginClose');
+    var loginCancel = document.getElementById('loginCancel');
+    var loginBackdrop = document.getElementById('loginBackdrop');
+
+    function openLogin(){ if(loginModal) loginModal.classList.add('is-open'); }
+    function closeLogin(){ if(loginModal) loginModal.classList.remove('is-open'); }
+
+    if(btnLogin) btnLogin.addEventListener('click', openLogin);
+    if(loginClose) loginClose.addEventListener('click', closeLogin);
+    if(loginCancel) loginCancel.addEventListener('click', closeLogin);
+    if(loginBackdrop) loginBackdrop.addEventListener('click', closeLogin);
+
+    if(window.location.search.indexOf('registro=exitoso') !== -1){
+      alert('¡Registro enviado con éxito! Te enviaremos un correo de confirmación. Serás notificado cuando la página empiece a funcionar.');
     }
   });
-
-  const btnLogin = document.getElementById('btnLogin');
-  const loginModal = document.getElementById('loginModal');
-  const loginClose = document.getElementById('loginClose');
-  const loginCancel = document.getElementById('loginCancel');
-  const loginBackdrop = document.getElementById('loginBackdrop');
-
-  const openLogin = () => loginModal.classList.add('is-open');
-  const closeLogin = () => loginModal.classList.remove('is-open');
-
-  btnLogin?.addEventListener('click', openLogin);
-  loginClose?.addEventListener('click', closeLogin);
-  loginCancel?.addEventListener('click', closeLogin);
-  loginBackdrop?.addEventListener('click', closeLogin);
-
-  if (window.location.search.includes('registro=exitoso')) {
-    alert('¡Registro enviado con éxito! Te enviaremos un correo de confirmación. Serás notificado cuando la página empiece a funcionar.');
-  }
+})();
 </script>
 
+
+<script>
+(function(){
+  function ready(fn){
+    if(document.readyState !== 'loading'){ fn(); } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  ready(function(){
+    var btnRegister = document.getElementById('btnRegister');
+    var registerModal = document.getElementById('registerModal');
+    var registerClose = document.getElementById('registerClose');
+    var registerCancel = document.getElementById('registerCancel');
+    var registerBackdrop = document.getElementById('registerBackdrop');
+    var registerForm = document.getElementById('registerForm');
+    var correoInput = document.getElementById('correo');
+    var confirmEmailField = document.getElementById('confirmEmailField');
+
+    function openRegister(){ if(registerModal) registerModal.classList.add('is-open'); }
+    function closeRegister(){ if(registerModal) registerModal.classList.remove('is-open'); }
+
+    if(btnRegister) btnRegister.addEventListener('click', openRegister);
+    if(registerClose) registerClose.addEventListener('click', closeRegister);
+    if(registerCancel) registerCancel.addEventListener('click', closeRegister);
+    if(registerBackdrop) registerBackdrop.addEventListener('click', closeRegister);
+
+    if(registerForm){
+      registerForm.addEventListener('submit', function(){
+        if(correoInput && confirmEmailField){
+          confirmEmailField.value = correoInput.value;
+        }
+      });
+    }
+
+    var btnLogin = document.getElementById('btnLogin');
+    var loginModal = document.getElementById('loginModal');
+    var loginClose = document.getElementById('loginClose');
+    var loginCancel = document.getElementById('loginCancel');
+    var loginBackdrop = document.getElementById('loginBackdrop');
+
+    function openLogin(){ if(loginModal) loginModal.classList.add('is-open'); }
+    function closeLogin(){ if(loginModal) loginModal.classList.remove('is-open'); }
+
+    if(btnLogin) btnLogin.addEventListener('click', openLogin);
+    if(loginClose) loginClose.addEventListener('click', closeLogin);
+    if(loginCancel) loginCancel.addEventListener('click', closeLogin);
+    if(loginBackdrop) loginBackdrop.addEventListener('click', closeLogin);
+
+    if(window.location.search.indexOf('registro=exitoso') !== -1){
+      alert('¡Registro enviado con éxito! Te enviaremos un correo de confirmación. Serás notificado cuando la página empiece a funcionar.');
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
