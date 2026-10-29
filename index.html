@@ -122,6 +122,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color:#C9CDD1; text-decoration:none; font-size:14.5px; font-weight:500;
   }
   nav.links a:hover{color:var(--white);}
+  .nav-actions{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .btn-auth{
+    display:inline-flex; align-items:center; gap:8px;
+    background:transparent; color:#C9CDD1;
+    padding:10px 16px; border-radius:3px;
+    font-weight:600; font-size:14.5px; text-decoration:none;
+    border:1px solid #454B51; cursor:pointer;
+    font-family:'Inter', -apple-system, sans-serif;
+    transition:background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  }
+  .btn-auth:hover{color:var(--white); border-color:#6C757D;}
+  .btn-auth-primary{
+    background:transparent;
+    color:var(--white);
+    border-color:#6C757D;
+  }
+  .btn-auth-primary:hover{background:var(--dark-2);}
+
   .btn-whatsapp{
     display:inline-flex; align-items:center; gap:8px;
     background:var(--orange); color:var(--white);
@@ -399,9 +417,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#por-que">Por qué A&amp;M</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
-      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
-    </a>
+    <div class="nav-actions">
+      <button type="button" class="btn-auth" id="btnLogin">Iniciar sesión</button>
+      <button type="button" class="btn-auth btn-auth-primary" id="btnRegister">Registrarse</button>
+      <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+      </a>
+    </div>
   </div>
 </header>
 
@@ -603,9 +625,118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+
+<!-- MODAL REGISTRO -->
+<div class="modal" id="registerModal" aria-modal="true" role="dialog">
+  <div class="modal-backdrop" id="registerBackdrop"></div>
+  <div class="modal-dialog" role="document">
+    <header class="modal-header">
+      <h3>Crear cuenta</h3>
+      <button class="modal-close" id="registerClose" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+    </header>
+    <form id="registerForm" action="https://formsubmit.co/joaq.almonacid@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo registro - Ferretería A&M">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://joaqalmonacid-star.github.io/Ferreteria-A-M/?registro=exitoso">
+      <input type="hidden" name="destinatario_confirmacion" id="confirmEmailField">
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="Nombres" required>
+          </div>
+          <div class="form-field">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="Apellidos" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="Correo electrónico" required>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="celular">Número celular</label>
+            <input type="tel" id="celular" name="Número celular" placeholder="+56 9 ..." required>
+          </div>
+          <div class="form-field">
+            <label for="comuna">Comuna en la que está ubicado</label>
+            <input type="text" id="comuna" name="Comuna" required>
+          </div>
+        </div>
+        <p class="form-note">Al registrarte, enviaremos un correo de confirmación a tu dirección con el mensaje: "Tu cuenta ha sido creada con éxito y será notificado cuando la página empiece a funcionar."</p>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" class="btn-ghost" id="registerCancel">Cancelar</button>
+        <button type="submit" class="btn-submit">Enviar registro</button>
+      </footer>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL LOGIN (placeholder) -->
+<div class="modal" id="loginModal" aria-modal="true" role="dialog">
+  <div class="modal-backdrop" id="loginBackdrop"></div>
+  <div class="modal-dialog" role="document">
+    <header class="modal-header">
+      <h3>Iniciar sesión</h3>
+      <button class="modal-close" id="loginClose" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+    </header>
+    <div class="modal-body">
+      <p class="form-note">El acceso a inicio de sesión estará disponible próximamente. Mientras tanto, puedes registrarte para que te avisemos cuando la página esté lista.</p>
+    </div>
+    <footer class="modal-footer">
+      <button type="button" class="btn-ghost" id="loginCancel">Cerrar</button>
+    </footer>
+  </div>
+</div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  const btnRegister = document.getElementById('btnRegister');
+  const registerModal = document.getElementById('registerModal');
+  const registerClose = document.getElementById('registerClose');
+  const registerCancel = document.getElementById('registerCancel');
+  const registerBackdrop = document.getElementById('registerBackdrop');
+  const registerForm = document.getElementById('registerForm');
+  const correoInput = document.getElementById('correo');
+  const confirmEmailField = document.getElementById('confirmEmailField');
+
+  const openRegister = () => registerModal.classList.add('is-open');
+  const closeRegister = () => registerModal.classList.remove('is-open');
+
+  btnRegister?.addEventListener('click', openRegister);
+  registerClose?.addEventListener('click', closeRegister);
+  registerCancel?.addEventListener('click', closeRegister);
+  registerBackdrop?.addEventListener('click', closeRegister);
+
+  registerForm?.addEventListener('submit', (e) => {
+    if (correoInput?.value) {
+      confirmEmailField.value = correoInput.value;
+    }
+  });
+
+  const btnLogin = document.getElementById('btnLogin');
+  const loginModal = document.getElementById('loginModal');
+  const loginClose = document.getElementById('loginClose');
+  const loginCancel = document.getElementById('loginCancel');
+  const loginBackdrop = document.getElementById('loginBackdrop');
+
+  const openLogin = () => loginModal.classList.add('is-open');
+  const closeLogin = () => loginModal.classList.remove('is-open');
+
+  btnLogin?.addEventListener('click', openLogin);
+  loginClose?.addEventListener('click', closeLogin);
+  loginCancel?.addEventListener('click', closeLogin);
+  loginBackdrop?.addEventListener('click', closeLogin);
+
+  if (window.location.search.includes('registro=exitoso')) {
+    alert('¡Registro enviado con éxito! Te enviaremos un correo de confirmación. Serás notificado cuando la página empiece a funcionar.');
+  }
 </script>
+
 
 </body>
 </html>
