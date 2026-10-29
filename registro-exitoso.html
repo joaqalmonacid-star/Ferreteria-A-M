@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro exitoso - Ferretería A&M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root{
+      --dark:#1C2024;
+      --orange:#D9622B;
+      --paper:#F1F1ED;
+      --steel:#DADCD6;
+      --ink:#1C2024;
+      --ink-soft:#54595E;
+      --white:#FFFFFF;
+      --maxw: 640px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:'Inter', -apple-system, sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      background:var(--dark);
+      border-bottom:1px solid #000;
+      padding:14px 24px;
+    }
+    .header-inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px;
+      font-family:'Big Shoulders Display', sans-serif;
+      font-weight:800; font-size:22px; letter-spacing:0.02em;
+      color:var(--white); text-decoration:none;
+      text-transform:uppercase;
+    }
+    .logo .mark{
+      width:34px; height:34px; border-radius:3px;
+      background:var(--orange);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--dark); font-size:16px;
+      flex:none;
+    }
+    .logo .place{color:#9AA3AC; font-weight:500; font-family:'Inter',sans-serif; font-size:12px; text-transform:none; letter-spacing:0; display:block; margin-top:1px;}
+    .logo-text{display:flex; flex-direction:column; line-height:1.1;}
+    main{padding:60px 16px;}
+    .card{
+      max-width:var(--maxw);
+      margin:0 auto;
+      background:var(--white);
+      border:1px solid var(--steel);
+      border-radius:6px;
+      overflow:hidden;
+      text-align:center;
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    }
+    .card-body{padding:48px 28px; display:flex; flex-direction:column; align-items:center; gap:16px;}
+    .icon{
+      width:72px; height:72px; border-radius:50%;
+      background:rgba(217,98,43,0.12);
+      color:var(--orange);
+      display:flex; align-items:center; justify-content:center;
+      font-size:34px;
+    }
+    h1{
+      font-family:'Big Shoulders Display', sans-serif;
+      font-weight:800;
+      text-transform:uppercase;
+      margin:0;
+      font-size:40px;
+    }
+    p{margin:0; color:var(--ink-soft); max-width:48ch;}
+    .actions{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      border:none;
+      border-radius:3px;
+      padding:12px 22px;
+      font-weight:700;
+      font-size:15px;
+      cursor:pointer;
+      font-family:'Inter', -apple-system, sans-serif;
+      text-decoration:none;
+    }
+    .btn-primary{background:var(--orange); color:var(--white);}
+    .btn-primary:hover{background:#C9551F;}
+    .btn-ghost{background:transparent; border:1px solid var(--steel); color:var(--ink);}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="mark" aria-hidden="true"><i class="fa-solid fa-hammer"></i></span>
+        <span class="logo-text">Ferretería A&amp;M<span class="place">Calbuco</span></span>
+      </a>
+      <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <div class="card-body">
+        <div class="icon"><i class="fa-solid fa-check"></i></div>
+        <h1>¡Registro enviado con éxito!</h1>
+        <p>Te hemos enviado un correo de confirmación con el mensaje: "Tu cuenta ha sido creada con éxito y será notificado cuando la página empiece a funcionar."</p>
+        <p>Revisa tu bandeja de entrada o spam. También hemos notificado a <strong>joaq.almonacid@gmail.com</strong> con todos tus datos.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="index.html">Volver al inicio</a>
+          <a class="btn btn-ghost" href="login.html">Ir a iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
