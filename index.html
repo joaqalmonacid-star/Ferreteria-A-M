@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es-CL">
 <head>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5LPT6KPC"></script>
@@ -35,8 +35,8 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferretería A&M — Calbuco | El material listo para tu próxima faena</title>
-<meta name="description" content="Ferretería A&M abastece a maestros de Calbuco con stock permanente, crédito de confianza y atención que conoce tu obra.">
+<title>FerreterÃ­a A&M â€” Calbuco | El material listo para tu prÃ³xima faena</title>
+<meta name="description" content="FerreterÃ­a A&M abastece a maestros de Calbuco con stock permanente, crÃ©dito de confianza y atenciÃ³n que conoce tu obra.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -425,6 +425,35 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
     .hero .wrap{padding:44px 20px 48px;}
   }
 </style>
+
+<style>
+.amodal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:9999}
+.amodal.open{display:flex}
+.amodal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.75)}
+.amodal-dialog{position:relative;background:#fff;width:min(560px,calc(100% - 24px));max-height:92vh;overflow-y:auto;border-radius:6px;box-shadow:0 40px 70px rgba(0,0,0,.6)}
+.amodal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#1C2024;color:#fff}
+.amodal-header h3{color:#fff;margin:0;font-size:26px;text-transform:none}
+.amodal-close{background:transparent;border:none;color:#C9CDD1;font-size:22px;cursor:pointer}
+.amodal-body{padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.amodal-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.amodal-field{display:flex;flex-direction:column;gap:6px}
+.amodal-field label{font-weight:600;font-size:13px}
+.amodal-field input{padding:10px 12px;border:1px solid #DADCD6;border-radius:3px;font-family:Inter,sans-serif}
+.amodal-footer{display:flex;gap:10px;justify-content:flex-end;padding:0 24px 22px}
+.amodal-btn{border:none;padding:11px 20px;border-radius:3px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif}
+.amodal-btn-primary{background:#D9622B;color:#fff}
+.amodal-btn-ghost{background:transparent;border:1px solid #DADCD6}
+.amodal-msg{font-size:13px}
+.amodal-msg.error{color:#B00020}
+.amodal-msg.success{color:#1B5E20}
+.amodal-note{font-size:12.5px;color:#54595E}
+.profile-wrap{position:relative}
+.profile-btn{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;padding:10px 16px;border:1px solid #6C757D;border-radius:3px;cursor:pointer;font-family:Inter,sans-serif}
+.profile-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid #DADCD6;border-radius:6px;display:none;min-width:200px;box-shadow:0 20px 40px rgba(0,0,0,.25);z-index:10000}
+.profile-menu.open{display:block}
+.profile-menu a,.profile-menu button{display:flex;align-items:center;gap:10px;width:100%;padding:10px 16px;background:transparent;border:none;text-align:left;font-family:Inter,sans-serif;font-size:14px;text-decoration:none;color:#1C2024;cursor:pointer}
+.profile-menu .divider{height:1px;background:#DADCD6;margin:6px 0}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -435,16 +464,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav">
     <a class="logo" href="#top">
       <span class="mark" aria-hidden="true"><i class="fa-solid fa-hammer"></i></span>
-      <span class="logo-text">Ferretería A&amp;M<span class="place">Calbuco</span></span>
+      <span class="logo-text">FerreterÃ­a A&amp;M<span class="place">Calbuco</span></span>
     </a>
-    <nav class="links" aria-label="Navegación principal">
-      <a href="#categorias">Categorías</a>
-      <a href="#por-que">Por qué A&amp;M</a>
+    <nav class="links" aria-label="NavegaciÃ³n principal">
+      <a href="#categorias">CategorÃ­as</a>
+      <a href="#por-que">Por quÃ© A&amp;M</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <div class="nav-actions">
-      <a class="btn-auth" href="login.html">Iniciar sesión</a>
-      <a class="btn-auth btn-auth-primary" href="registro.html">Registrarse</a>
+    <div class="nav-actions" id="navActions">
+      <button type="button" class="btn-auth" id="openLoginBtn">Iniciar sesiÃ³n</button>
+      <button type="button" class="btn-auth btn-auth-primary" id="openRegisterBtn">Registrarse</button>
       <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
@@ -458,14 +487,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="hero-eyebrow">Ferretería A&amp;M · Calbuco</span>
-        <h1>El material listo antes de que se enfríe la faena</h1>
-        <p class="lead">Stock permanente, crédito de confianza y una ferretería que conoce tu obra. Para que no tengas que cruzar a Puerto Montt por un perno que te falta.</p>
+        <span class="hero-eyebrow">FerreterÃ­a A&amp;M Â· Calbuco</span>
+        <h1>El material listo antes de que se enfrÃ­e la faena</h1>
+        <p class="lead">Stock permanente, crÃ©dito de confianza y una ferreterÃ­a que conoce tu obra. Para que no tengas que cruzar a Puerto Montt por un perno que te falta.</p>
         <div class="cta-row">
           <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos por WhatsApp
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> EscrÃ­benos por WhatsApp
           </a>
-          <a class="link-quiet" href="#categorias">Ver categorías</a>
+          <a class="link-quiet" href="#categorias">Ver categorÃ­as</a>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -484,22 +513,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap grid">
       <div>
         <div class="section-head" style="margin-bottom:22px;">
-          <h2 style="color:#fff;">Se acabó el material a media mañana</h2>
+          <h2 style="color:#fff;">Se acabÃ³ el material a media maÃ±ana</h2>
         </div>
-        <p class="lead-copy">Cruzar a Puerto Montt por un insumo que falta cuesta <strong>media jornada de obra</strong> — y un cliente que empieza a preguntarse si le cumplirás el plazo. En Calbuco esa no es la única opción.</p>
+        <p class="lead-copy">Cruzar a Puerto Montt por un insumo que falta cuesta <strong>media jornada de obra</strong> â€” y un cliente que empieza a preguntarse si le cumplirÃ¡s el plazo. En Calbuco esa no es la Ãºnica opciÃ³n.</p>
       </div>
       <ul class="checklist">
         <li>
           <i class="fa-solid fa-clock" aria-hidden="true"></i>
-          <span><b>Vuelves a la obra en minutos</b>Sin viaje, sin fila de mostrador, sin perder el día por un solo perno.</span>
+          <span><b>Vuelves a la obra en minutos</b>Sin viaje, sin fila de mostrador, sin perder el dÃ­a por un solo perno.</span>
         </li>
         <li>
           <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-          <span><b>Crédito de maestro a maestro</b>Fiado de confianza para quienes trabajan con nosotros hace años.</span>
+          <span><b>CrÃ©dito de maestro a maestro</b>Fiado de confianza para quienes trabajan con nosotros hace aÃ±os.</span>
         </li>
         <li>
           <i class="fa-solid fa-user-check" aria-hidden="true"></i>
-          <span><b>Te conocen a ti y tu obra</b>Asesoría técnica real, no una respuesta genérica de mostrador grande.</span>
+          <span><b>Te conocen a ti y tu obra</b>AsesorÃ­a tÃ©cnica real, no una respuesta genÃ©rica de mostrador grande.</span>
         </li>
       </ul>
     </div>
@@ -510,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
       <div class="section-head">
         <h2>Todo lo que tu obra necesita, en un solo lugar</h2>
-        <p>Desde la herramienta que se rompió esta mañana hasta el material para terminar la pega del mes.</p>
+        <p>Desde la herramienta que se rompiÃ³ esta maÃ±ana hasta el material para terminar la pega del mes.</p>
       </div>
       <div class="tag-grid">
         <article class="tag-card">
@@ -520,18 +549,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-          <h3>Herramientas eléctricas</h3>
-          <p>Taladros, esmeriles y equipos para avanzar más rápido en terreno.</p>
+          <h3>Herramientas elÃ©ctricas</h3>
+          <p>Taladros, esmeriles y equipos para avanzar mÃ¡s rÃ¡pido en terreno.</p>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
-          <h3>Fijaciones y pernería</h3>
-          <p>Pernos, tornillos, tarugos y anclajes — al detalle, cuando los necesites.</p>
+          <h3>Fijaciones y pernerÃ­a</h3>
+          <p>Pernos, tornillos, tarugos y anclajes â€” al detalle, cuando los necesites.</p>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-trowel-bricks" aria-hidden="true"></i>
-          <h3>Materiales de construcción</h3>
-          <p>Cemento, áridos, fierro y todo lo necesario para avanzar la obra gruesa.</p>
+          <h3>Materiales de construcciÃ³n</h3>
+          <p>Cemento, Ã¡ridos, fierro y todo lo necesario para avanzar la obra gruesa.</p>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-paint-roller" aria-hidden="true"></i>
@@ -541,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <article class="tag-card">
           <i class="fa-solid fa-hard-hat" aria-hidden="true"></i>
           <h3>Seguridad y EPP</h3>
-          <p>Cascos, guantes y elementos de protección para trabajar tranquilo.</p>
+          <p>Cascos, guantes y elementos de protecciÃ³n para trabajar tranquilo.</p>
         </article>
       </div>
     </div>
@@ -557,31 +586,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="mark-quote" aria-hidden="true">&ldquo;</span>
           <blockquote>Con A&amp;M nunca he tenido que decirle a un cliente que hay que esperar.</blockquote>
         </div>
-        <figcaption><b>Maestro gasfíter</b>Calbuco</figcaption>
+        <figcaption><b>Maestro gasfÃ­ter</b>Calbuco</figcaption>
       </figure>
       <div>
         <div class="section-head" style="margin-bottom:8px;">
-          <h2>Por qué los maestros de Calbuco eligen A&amp;M</h2>
+          <h2>Por quÃ© los maestros de Calbuco eligen A&amp;M</h2>
         </div>
         <div class="reasons">
           <div class="reason">
             <span class="num">1</span>
             <div>
               <h3>Cumples el plazo que prometiste</h3>
-              <p>Stock permanente de lo esencial, para que ningún cliente vea detenida tu obra por un insumo.</p>
+              <p>Stock permanente de lo esencial, para que ningÃºn cliente vea detenida tu obra por un insumo.</p>
             </div>
           </div>
           <div class="reason">
             <span class="num">2</span>
             <div>
               <h3>Te ven como el maestro que resuelve</h3>
-              <p>Cada vez que no improvisas ni atrasas la pega, tu nombre suena mejor con el próximo cliente.</p>
+              <p>Cada vez que no improvisas ni atrasas la pega, tu nombre suena mejor con el prÃ³ximo cliente.</p>
             </div>
           </div>
           <div class="reason">
             <span class="num">3</span>
             <div>
-              <h3>Atención de quien conoce el oficio</h3>
+              <h3>AtenciÃ³n de quien conoce el oficio</h3>
               <p>Te asesoramos con el material correcto para tu faena, no solo con lo que hay en la vitrina.</p>
             </div>
           </div>
@@ -603,15 +632,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="cell home">Comprar en A&amp;M</div>
         </div>
         <div class="compare-row">
-          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Medio día de obra perdido en el viaje</div>
+          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Medio dÃ­a de obra perdido en el viaje</div>
           <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> Vuelves a la obra en menos de 30 minutos</div>
         </div>
         <div class="compare-row">
-          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Pago 100% bancarizado, sin excepción</div>
-          <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> Crédito de confianza para maestros habituales</div>
+          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Pago 100% bancarizado, sin excepciÃ³n</div>
+          <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> CrÃ©dito de confianza para maestros habituales</div>
         </div>
         <div class="compare-row">
-          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Atención de mostrador, sin historial contigo</div>
+          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> AtenciÃ³n de mostrador, sin historial contigo</div>
           <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> Te conocen a ti, tu obra y lo que sueles necesitar</div>
         </div>
       </div>
@@ -622,18 +651,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="final-cta" id="contacto">
     <div class="wrap">
       <div>
-        <h2>Tu próxima obra no debería esperar</h2>
-        <p>Escríbenos y te confirmamos al tiro si tenemos lo que necesitas.</p>
+        <h2>Tu prÃ³xima obra no deberÃ­a esperar</h2>
+        <p>EscrÃ­benos y te confirmamos al tiro si tenemos lo que necesitas.</p>
         <div style="margin-top:26px;">
           <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos por WhatsApp
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> EscrÃ­benos por WhatsApp
           </a>
         </div>
       </div>
       <div class="contact-block">
-        <div class="row"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><b>Ferretería A&amp;M</b>Sector centro, Calbuco</span></div>
-        <div class="row"><i class="fa-solid fa-clock" aria-hidden="true"></i><span><b>Horario</b>Lunes a sábado, 8:30 a 19:00</span></div>
-        <div class="row"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><b>Teléfono</b>+56 9 0000 0000</span></div>
+        <div class="row"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><b>FerreterÃ­a A&amp;M</b>Sector centro, Calbuco</span></div>
+        <div class="row"><i class="fa-solid fa-clock" aria-hidden="true"></i><span><b>Horario</b>Lunes a sÃ¡bado, 8:30 a 19:00</span></div>
+        <div class="row"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><b>TelÃ©fono</b>+56 9 0000 0000</span></div>
       </div>
     </div>
   </section>
@@ -643,191 +672,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site">
   <div class="wrap">
     <span>© <span id="year"></span> Ferretería A&amp;M, Calbuco.</span>
-    <a href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    <a href="https://wa.me/56900000000" target="_blank" rel="noopener">EscrÃ­benos por WhatsApp</a>
   </div>
   <div class="wrap">
-    <p class="foot-note">Dirección, teléfono y horario de referencia — reemplazar por los datos reales del local antes de publicar.</p>
+    <p class="foot-note">DirecciÃ³n, telÃ©fono y horario de referencia â€” reemplazar por los datos reales del local antes de publicar.</p>
   </div>
 </footer>
 
 
-<!-- MODAL REGISTRO -->
-<div class="modal" id="registerModal" aria-modal="true" role="dialog">
-  <div class="modal-backdrop" id="registerBackdrop"></div>
-  <div class="modal-dialog" role="document">
-    <header class="modal-header">
-      <h3>Crear cuenta</h3>
-      <button class="modal-close" id="registerClose" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-    </header>
-    <form id="registerForm" action="https://formsubmit.co/joaq.almonacid@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Nuevo registro - Ferretería A&M">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://joaqalmonacid-star.github.io/Ferreteria-A-M/?registro=exitoso">
-      <input type="hidden" name="destinatario_confirmacion" id="confirmEmailField">
-      <div class="modal-body">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="nombres">Nombres</label>
-            <input type="text" id="nombres" name="Nombres" required>
-          </div>
-          <div class="form-field">
-            <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" name="Apellidos" required>
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="Correo electrónico" required>
-        </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label for="celular">Número celular</label>
-            <input type="tel" id="celular" name="Número celular" placeholder="+56 9 ..." required>
-          </div>
-          <div class="form-field">
-            <label for="comuna">Comuna en la que está ubicado</label>
-            <input type="text" id="comuna" name="Comuna" required>
-          </div>
-        </div>
-        <p class="form-note">Al registrarte, enviaremos un correo de confirmación a tu dirección con el mensaje: "Tu cuenta ha sido creada con éxito y será notificado cuando la página empiece a funcionar."</p>
-      </div>
-      <footer class="modal-footer">
-        <button type="button" class="btn-ghost" id="registerCancel">Cancelar</button>
-        <button type="submit" class="btn-submit">Enviar registro</button>
-      </footer>
-    </form>
-  </div>
-</div>
-
-<!-- MODAL LOGIN (placeholder) -->
-<div class="modal" id="loginModal" aria-modal="true" role="dialog">
-  <div class="modal-backdrop" id="loginBackdrop"></div>
-  <div class="modal-dialog" role="document">
-    <header class="modal-header">
-      <h3>Iniciar sesión</h3>
-      <button class="modal-close" id="loginClose" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-    </header>
-    <div class="modal-body">
-      <p class="form-note">El acceso a inicio de sesión estará disponible próximamente. Mientras tanto, puedes registrarte para que te avisemos cuando la página esté lista.</p>
-    </div>
-    <footer class="modal-footer">
-      <button type="button" class="btn-ghost" id="loginCancel">Cerrar</button>
-    </footer>
-  </div>
-</div>
-
-
-
-
-
-
-
-
+<!-- AUTH MODALS -->
+<div class="amodal" id="loginModal"><div class="amodal-backdrop" data-close="login"></div><div class="amodal-dialog"><header class="amodal-header"><h3>Iniciar sesiÃ³n</h3><button class="amodal-close" data-close="login"><i class="fa-solid fa-xmark"></i></button></header><div class="amodal-body"><div class="amodal-field"><label>Correo electrÃ³nico</label><input id="loginCorreo" type="email"></div><div class="amodal-field"><label>ContraseÃ±a</label><input id="loginPass" type="password"></div><div class="amodal-msg" id="loginMsg"></div></div><footer class="amodal-footer"><button class="amodal-btn amodal-btn-ghost" data-close="login">Cancelar</button><button class="amodal-btn amodal-btn-primary" id="loginSubmit">Iniciar sesiÃ³n</button></footer></div></div>
+<div class="amodal" id="registerModal"><div class="amodal-backdrop" data-close="register"></div><div class="amodal-dialog"><header class="amodal-header"><h3>Crear cuenta</h3><button class="amodal-close" data-close="register"><i class="fa-solid fa-xmark"></i></button></header><div class="amodal-body"><div class="amodal-row"><div class="amodal-field"><label>Nombres</label><input id="regNombres"></div><div class="amodal-field"><label>Apellidos</label><input id="regApellidos"></div></div><div class="amodal-field"><label>Correo electrÃ³nico</label><input id="regCorreo" type="email"></div><div class="amodal-row"><div class="amodal-field"><label>NÃºmero celular</label><input id="regCelular"></div><div class="amodal-field"><label>Comuna</label><input id="regComuna"></div></div><div class="amodal-row"><div class="amodal-field"><label>ContraseÃ±a</label><input id="regPass" type="password"></div><div class="amodal-field"><label>Confirmar contraseÃ±a</label><input id="regPass2" type="password"></div></div><div class="amodal-msg" id="registerMsg"></div><p class="amodal-note">Te enviaremos un correo de confirmaciÃ³n con: "Tu cuenta ha sido creada con Ã©xito y serÃ¡ notificado cuando la pÃ¡gina empiece a funcionar." TambiÃ©n enviaremos tus datos a joaq.almonacid@gmail.com.</p></div><footer class="amodal-footer"><button class="amodal-btn amodal-btn-ghost" data-close="register">Cancelar</button><button class="amodal-btn amodal-btn-primary" id="registerSubmit">Crear cuenta</button></footer></div></div>
 <script>
 (function(){
-  function ready(fn){
-    if(document.readyState !== 'loading'){ fn(); } else { document.addEventListener('DOMContentLoaded', fn); }
-  }
-  ready(function(){
-    var btnRegister = document.getElementById('btnRegister');
-    var registerModal = document.getElementById('registerModal');
-    var registerClose = document.getElementById('registerClose');
-    var registerCancel = document.getElementById('registerCancel');
-    var registerBackdrop = document.getElementById('registerBackdrop');
-    var registerForm = document.getElementById('registerForm');
-    var correoInput = document.getElementById('correo');
-    var confirmEmailField = document.getElementById('confirmEmailField');
-
-    function openRegister(){ if(registerModal) registerModal.classList.add('is-open'); }
-    function closeRegister(){ if(registerModal) registerModal.classList.remove('is-open'); }
-
-    if(btnRegister) btnRegister.addEventListener('click', openRegister);
-    if(registerClose) registerClose.addEventListener('click', closeRegister);
-    if(registerCancel) registerCancel.addEventListener('click', closeRegister);
-    if(registerBackdrop) registerBackdrop.addEventListener('click', closeRegister);
-
-    if(registerForm){
-      registerForm.addEventListener('submit', function(){
-        if(correoInput && confirmEmailField){
-          confirmEmailField.value = correoInput.value;
-        }
-      });
-    }
-
-    var btnLogin = document.getElementById('btnLogin');
-    var loginModal = document.getElementById('loginModal');
-    var loginClose = document.getElementById('loginClose');
-    var loginCancel = document.getElementById('loginCancel');
-    var loginBackdrop = document.getElementById('loginBackdrop');
-
-    function openLogin(){ if(loginModal) loginModal.classList.add('is-open'); }
-    function closeLogin(){ if(loginModal) loginModal.classList.remove('is-open'); }
-
-    if(btnLogin) btnLogin.addEventListener('click', openLogin);
-    if(loginClose) loginClose.addEventListener('click', closeLogin);
-    if(loginCancel) loginCancel.addEventListener('click', closeLogin);
-    if(loginBackdrop) loginBackdrop.addEventListener('click', closeLogin);
-
-    if(window.location.search.indexOf('registro=exitoso') !== -1){
-      alert('¡Registro enviado con éxito! Te enviaremos un correo de confirmación. Serás notificado cuando la página empiece a funcionar.');
-    }
-  });
+  const nav=document.getElementById('navActions');
+  document.getElementById('openLoginBtn').onclick=function(){document.getElementById('loginModal').classList.add('open');};
+  document.getElementById('openRegisterBtn').onclick=function(){document.getElementById('registerModal').classList.add('open');};
+  document.querySelectorAll('[data-close=login]').forEach(function(x){x.onclick=function(){document.getElementById('loginModal').classList.remove('open');};});
+  document.querySelectorAll('[data-close=register]').forEach(function(x){x.onclick=function(){document.getElementById('registerModal').classList.remove('open');};});
+  fetch('/api/auth/me',{credentials:'include'}).then(function(r){return r.json();}).then(function(d){if(d.ok&&d.user){nav.innerHTML='<div class="profile-wrap"><button class="profile-btn" id="pb"><i class="fa-solid fa-user"></i> Mi perfil <i class="fa-solid fa-chevron-down"></i></button><div class="profile-menu" id="pm"><a href="#top"><i class="fa-solid fa-box"></i> Mis pedidos</a><a href="#top"><i class="fa-solid fa-id-card"></i> Mi cuenta</a><div class="divider"></div><button id="lo"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesiÃ³n</button></div></div><a class="btn-whatsapp" href="https://wa.me/56900000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>';document.getElementById('pb').onclick=function(e){e.stopPropagation();document.getElementById('pm').classList.toggle('open');};document.addEventListener('click',function(){document.getElementById('pm').classList.remove('open');});document.getElementById('lo').onclick=function(){fetch('/api/auth/logout',{method:'POST',credentials:'include'}).then(function(){location.reload();});};}}).catch(function(){});
+  document.getElementById('loginSubmit').onclick=function(){
+    var m=document.getElementById('loginMsg'); m.textContent=''; m.className='amodal-msg';
+    var c=document.getElementById('loginCorreo').value.trim(), p=document.getElementById('loginPass').value;
+    if(!c||!p){m.textContent='Completa correo y contraseÃ±a';m.classList.add('error');return;}
+    fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({correo:c,password:p})}).then(function(r){return r.json();}).then(function(d){if(d.ok){document.getElementById('loginModal').classList.remove('open');location.reload();}else{m.textContent=d.error||'Error';m.classList.add('error');}});
+  };
+  document.getElementById('registerSubmit').onclick=function(){
+    var m=document.getElementById('registerMsg'); m.textContent=''; m.className='amodal-msg';
+    var n=document.getElementById('regNombres').value.trim(),a=document.getElementById('regApellidos').value.trim(),c=document.getElementById('regCorreo').value.trim(),cel=document.getElementById('regCelular').value.trim(),com=document.getElementById('regComuna').value.trim(),p=document.getElementById('regPass').value,p2=document.getElementById('regPass2').value;
+    if(!n||!a||!c||!cel||!com||!p||!p2){m.textContent='Completa todos los campos';m.classList.add('error');return;}
+    if(p!==p2){m.textContent='Las contraseÃ±as no coinciden';m.classList.add('error');return;}
+    if(p.length<6){m.textContent='MÃ­nimo 6 caracteres';m.classList.add('error');return;}
+    fetch('/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({nombres:n,apellidos:a,correo:c,celular:cel,comuna:com,password:p})}).then(function(r){return r.json();}).then(function(d){if(d.ok){m.textContent='Â¡Registro exitoso!';m.classList.add('success');setTimeout(function(){document.getElementById('registerModal').classList.remove('open');location.reload();},1200);}else{m.textContent=d.error||'Error';m.classList.add('error');}});
+  };
 })();
-</script>
-
-
-<script>
-(function(){
-  function ready(fn){
-    if(document.readyState !== 'loading'){ fn(); } else { document.addEventListener('DOMContentLoaded', fn); }
-  }
-  ready(function(){
-    var btnRegister = document.getElementById('btnRegister');
-    var registerModal = document.getElementById('registerModal');
-    var registerClose = document.getElementById('registerClose');
-    var registerCancel = document.getElementById('registerCancel');
-    var registerBackdrop = document.getElementById('registerBackdrop');
-    var registerForm = document.getElementById('registerForm');
-    var correoInput = document.getElementById('correo');
-    var confirmEmailField = document.getElementById('confirmEmailField');
-
-    function openRegister(){ if(registerModal) registerModal.classList.add('is-open'); }
-    function closeRegister(){ if(registerModal) registerModal.classList.remove('is-open'); }
-
-    if(btnRegister) btnRegister.addEventListener('click', openRegister);
-    if(registerClose) registerClose.addEventListener('click', closeRegister);
-    if(registerCancel) registerCancel.addEventListener('click', closeRegister);
-    if(registerBackdrop) registerBackdrop.addEventListener('click', closeRegister);
-
-    if(registerForm){
-      registerForm.addEventListener('submit', function(){
-        if(correoInput && confirmEmailField){
-          confirmEmailField.value = correoInput.value;
-        }
-      });
-    }
-
-    var btnLogin = document.getElementById('btnLogin');
-    var loginModal = document.getElementById('loginModal');
-    var loginClose = document.getElementById('loginClose');
-    var loginCancel = document.getElementById('loginCancel');
-    var loginBackdrop = document.getElementById('loginBackdrop');
-
-    function openLogin(){ if(loginModal) loginModal.classList.add('is-open'); }
-    function closeLogin(){ if(loginModal) loginModal.classList.remove('is-open'); }
-
-    if(btnLogin) btnLogin.addEventListener('click', openLogin);
-    if(loginClose) loginClose.addEventListener('click', closeLogin);
-    if(loginCancel) loginCancel.addEventListener('click', closeLogin);
-    if(loginBackdrop) loginBackdrop.addEventListener('click', closeLogin);
-
-    if(window.location.search.indexOf('registro=exitoso') !== -1){
-      alert('¡Registro enviado con éxito! Te enviaremos un correo de confirmación. Serás notificado cuando la página empiece a funcionar.');
-    }
-  });
+  var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
 })();
 </script>
 
 </body>
 </html>
+
