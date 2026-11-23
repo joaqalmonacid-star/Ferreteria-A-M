@@ -45,16 +45,16 @@ Si `BREVO_API_KEY` está vacía, el registro sigue funcionando y en la consola a
 
 ## 3. Desplegar (cuando quieras dejar de depender de tu PC)
 
-En Render/Railway:
+Las instrucciones completas para **Render y Railway** están en [`DEPLOY.md`](../DEPLOY.md) (raíz del repo).
+El repo incluye `render.yaml` (Blueprint) y `railway.json` con el health check `/api/health`.
 
-- **Build command:** `npm install` (no hay dependencias, termina al instante)
-- **Start command:** `npm start`
-- **Variables de entorno:** las mismas del `.env`, con `NODE_ENV=production`.
-- Si el HTML sigue en GitHub Pages, configura:
-  - `ALLOWED_ORIGIN=https://joaqalmonacid-star.github.io`
-  - En `config.js` (raíz del repo): `window.API_BASE = 'https://URL-de-tu-backend';`
+Resumen: build `npm install`, start `npm start`, `NODE_ENV=production` y las variables de Brevo
+como secretos de la plataforma. Si el HTML queda en GitHub Pages, pon `ALLOWED_ORIGIN`
+con ese origen y `window.API_BASE` en `config.js` con la URL del backend.
 
 Con `API_BASE` vacío, el frontend usa el mismo origen (ideal para `localhost`).
+
+> También puedes arrancar desde la raíz del repo con `npm start` ( usa `server/server.js`).
 
 ## Notas
 

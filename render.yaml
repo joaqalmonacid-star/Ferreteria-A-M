@@ -1,0 +1,26 @@
+# Render Blueprint: https://dashboard.render.com -> New -> Blueprint -> conectar este repo
+# No pongas secretos aquí: BREVO_API_KEY y BREVO_SENDER_EMAIL se piden al crear el Blueprint.
+services:
+  - type: web
+    name: ferreteria-am-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Render genera este valor automáticamente (no compartir).
+      - key: SESSION_SECRET
+        generateValue: true
+      # Origen exacto del frontend en GitHub Pages (sin barra final).
+      - key: ALLOWED_ORIGIN
+        value: https://joaqalmonacid-star.github.io
+      # La consola de Render te pedirá estos valores al importar el Blueprint.
+      - key: BREVO_API_KEY
+        sync: false
+      - key: BREVO_SENDER_EMAIL
+        sync: false
+      - key: BREVO_SENDER_NAME
+        value: Ferretería A&M

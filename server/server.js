@@ -104,8 +104,12 @@ function readSession(req) {
 }
 
 function sessionCookie(value) {
+  // Si el frontend está en otro dominio (GitHub Pages) necesitamos
+  // SameSite=None + Secure para que el navegador envíe la cookie en fetch cross-site.
+  const crossSite = NODE_ENV === 'production' && Boolean(ALLOWED_ORIGIN);
   const secure = NODE_ENV === 'production' ? '; Secure' : '';
-  return 'ham_session=' + value + '; Path=/; HttpOnly; SameSite=Lax; Max-Age=' +
+  const sameSite = crossSite ? '; SameSite=None' : '; SameSite=Lax';
+  return 'ham_session=' + value + '; Path=/; HttpOnly' + sameSite + '; Max-Age=' +
     (value ? SESSION_MAX_AGE : 0) + secure;
 }
 
