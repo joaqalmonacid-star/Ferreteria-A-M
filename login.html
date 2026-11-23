@@ -157,6 +157,7 @@
       </form>
     </div>
   </main>
+  <script src="config.js"></script>
   <script>
   (function(){
     var form=document.getElementById('loginForm');
@@ -177,7 +178,7 @@
 
       btn.disabled=true;
       setMsg('Iniciando sesión…');
-      fetch('/api/auth/login',{
+      fetch((window.API_BASE||'')+'/api/auth/login',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         credentials:'include',

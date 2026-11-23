@@ -183,6 +183,7 @@
       </form>
     </div>
   </main>
+  <script src="config.js"></script>
   <script>
   (function(){
     var form=document.getElementById('registerForm');
@@ -211,7 +212,7 @@
 
       btn.disabled=true;
       setMsg('Creando cuenta…');
-      fetch('/api/auth/register',{
+      fetch((window.API_BASE||'')+'/api/auth/register',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         credentials:'include',
