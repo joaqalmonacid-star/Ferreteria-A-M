@@ -36,7 +36,10 @@ const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(__dirname, 'data');
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
 const SESSION_SECRET = process.env.SESSION_SECRET || 'cambia-este-valor-por-una-cadena-larga-y-aleatoria';
-const ALLOWED_ORIGIN = (process.env.ALLOWED_ORIGIN || '').trim();
+// Se permiten varios orígenes separados por comas (GitHub Pages, Workers, etc.).
+const ALLOWED_ORIGINS = new Set(
+  (process.env.ALLOWED_ORIGIN || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean)
+);
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const SESSION_MAX_AGE = 7 * 24 * 60 * 60; // 7 días, en segundos
 
@@ -106,7 +109,7 @@ function readSession(req) {
 function sessionCookie(value) {
   // Si el frontend está en otro dominio (GitHub Pages) necesitamos
   // SameSite=None + Secure para que el navegador envíe la cookie en fetch cross-site.
-  const crossSite = NODE_ENV === 'production' && Boolean(ALLOWED_ORIGIN);
+  const crossSite = NODE_ENV === 'production' && ALLOWED_ORIGINS.size > 0;
   const secure = NODE_ENV === 'production' ? '; Secure' : '';
   const sameSite = crossSite ? '; SameSite=None' : '; SameSite=Lax';
   return 'ham_session=' + value + '; Path=/; HttpOnly' + sameSite + '; Max-Age=' +
@@ -211,12 +214,11 @@ function readBody(req) {
 }
 
 function applyCors(req, res) {
-  if (!ALLOWED_ORIGIN) return;
-  if (req.headers.origin === ALLOWED_ORIGIN) {
-    res.setHeader('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-    res.setHeader('Vary', 'Origin');
-  }
+  const origin = req.headers.origin;
+  if (!origin || !ALLOWED_ORIGINS.has(origin)) return;
+  res.setHeader('Access-Control-Allow-Origin', origin);
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Vary', 'Origin');
 }
 
 const MIME = {

@@ -14,9 +14,9 @@ services:
       # Render genera este valor automáticamente (no compartir).
       - key: SESSION_SECRET
         generateValue: true
-      # Origen exacto del frontend en GitHub Pages (sin barra final).
+      # Orígenes del frontend, separados por comas (sin barra final ni rutas).
       - key: ALLOWED_ORIGIN
-        value: https://joaqalmonacid-star.github.io
+        value: "https://joaqalmonacid-star.github.io,https://ferreteria-a-m.joaq-almonacid.workers.dev"
       # La consola de Render te pedirá estos valores al importar el Blueprint.
       - key: BREVO_API_KEY
         sync: false

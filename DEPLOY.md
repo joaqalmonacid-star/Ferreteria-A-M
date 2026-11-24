@@ -7,8 +7,8 @@ No puedo crear el servicio desde aquí porque no tengo acceso a tu cuenta de Ren
 ## Antes de empezar
 
 - Ten a mano tu **API key de Brevo** (con permisos de envío SMTP) y un **remitente verificado** en Brevo.
-- El frontend sigue publicado en GitHub Pages, así que el backend debe permitir ese origen:
-  `https://joaqalmonacid-star.github.io`
+- El frontend se sirve desde GitHub Pages y/o Cloudflare Workers, así que el backend debe permitir esos orígenes (separados por comas):
+  `https://joaqalmonacid-star.github.io,https://ferreteria-a-m.joaq-almonacid.workers.dev`
 
 ---
 
@@ -48,7 +48,7 @@ No puedo crear el servicio desde aquí porque no tengo acceso a tu cuenta de Ren
    | --- | --- |
    | `NODE_ENV` | `production` |
    | `SESSION_SECRET` | cadena larga y aleatoria |
-   | `ALLOWED_ORIGIN` | `https://joaqalmonacid-star.github.io` |
+   | `ALLOWED_ORIGIN` | `https://joaqalmonacid-star.github.io,https://ferreteria-a-m.joaq-almonacid.workers.dev` |
    | `BREVO_API_KEY` | tu API key de Brevo |
    | `BREVO_SENDER_EMAIL` | remitente verificado |
    | `BREVO_SENDER_NAME` | `Ferretería A&M` |
