@@ -397,6 +397,33 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
   .contact-block .row i{margin-top:3px; width:18px; flex:none;}
   .contact-block b{display:block; color:var(--dark);}
 
+  /* ---------- mapa / cómo llegar ---------- */
+  .map-section{background:var(--paper-2);}
+  .map-section .grid{
+    display:grid; grid-template-columns:0.8fr 1.2fr; gap:40px; align-items:center;
+  }
+  .map-section h2{font-size:clamp(28px,3.6vw,42px); max-width:14ch;}
+  .map-section .lead{margin-top:14px; font-size:16.5px; color:var(--ink-soft); max-width:42ch;}
+  .map-address{
+    margin-top:22px; display:flex; gap:12px; align-items:flex-start;
+    font-size:16.5px; color:var(--ink-soft);
+  }
+  .map-address i{color:var(--orange); margin-top:4px; width:20px; flex:none;}
+  .map-address b{display:block; color:var(--dark); font-size:18px;}
+  .map-section .btn-outline{
+    display:inline-flex; align-items:center; gap:8px; margin-top:24px;
+    padding:12px 20px; border:1px solid var(--dark); border-radius:3px;
+    color:var(--dark); text-decoration:none; font-weight:600; font-size:14.5px;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .map-section .btn-outline:hover{background:var(--dark); color:var(--white);}
+  .map-frame{
+    border:1px solid var(--steel); background:var(--paper);
+    box-shadow:0 10px 30px rgba(28,32,36,0.10);
+    border-radius:3px; overflow:hidden;
+  }
+  .map-frame iframe{display:block; width:100%; height:360px; border:0;}
+
   /* ---------- footer ---------- */
   footer.site{
     background:var(--dark); color:#9AA3AC; padding:40px 0 28px; font-size:13.5px;
@@ -412,7 +439,7 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
   @media (max-width: 920px){
     .hero .wrap{grid-template-columns:1fr; padding-top:52px;}
     .hero-art{max-width:340px; margin:0 auto;}
-    .pain .grid, .trust .grid, .final-cta .wrap{grid-template-columns:1fr;}
+    .pain .grid, .trust .grid, .final-cta .wrap, .map-section .grid{grid-template-columns:1fr;}
     .contact-block{border-left:none; padding-left:0; border-top:2px solid rgba(28,32,36,0.25); padding-top:24px;}
     .tag-grid{grid-template-columns:repeat(2, 1fr);}
     .compare-row{grid-template-columns:1fr;}
@@ -423,6 +450,7 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
     .tag-grid{grid-template-columns:1fr;}
     section{padding:56px 0;}
     .hero .wrap{padding:44px 20px 48px;}
+    .map-frame iframe{height:280px;}
   }
 </style>
 
@@ -641,9 +669,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="contact-block">
-        <div class="row"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><b>Ferretería A&amp;M</b>Sector centro, Calbuco</span></div>
+        <div class="row"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><b>Ferretería A&amp;M</b>Federico Errázuriz N° 206, Calbuco</span></div>
         <div class="row"><i class="fa-solid fa-clock" aria-hidden="true"></i><span><b>Horario</b>Lunes a sábado, 8:30 a 19:00</span></div>
         <div class="row"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><b>Teléfono</b>+56 9 0000 0000</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA / CÓMO LLEGAR -->
+  <section class="map-section" id="como-llegar">
+    <div class="wrap grid">
+      <div>
+        <h2>Cómo llegar</h2>
+        <p class="lead">Estamos en el centro de Calbuco, a pasos de la plaza. Ven a vernos cuando necesites materiales para tu obra.</p>
+        <div class="map-address">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span><b>Ferretería A&amp;M</b>Federico Errázuriz N° 206, Calbuco</span>
+        </div>
+        <a class="btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Federico%20Err%C3%A1zuriz%20206%2C%20Calbuco" target="_blank" rel="noopener">
+          <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Cómo llegar
+        </a>
+      </div>
+      <div class="map-frame">
+        <iframe
+          title="Mapa de Ferretería A&M en Federico Errázuriz N° 206, Calbuco"
+          src="https://www.google.com/maps?q=Federico%20Err%C3%A1zuriz%20206%2C%20Calbuco&amp;output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -656,7 +707,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
   </div>
   <div class="wrap">
-    <p class="foot-note">Dirección, teléfono y horario de referencia — reemplazar por los datos reales del local antes de publicar.</p>
+    <p class="foot-note">Teléfono y horario de referencia — reemplazar por los datos reales del local antes de publicar.</p>
   </div>
 </footer>
 
