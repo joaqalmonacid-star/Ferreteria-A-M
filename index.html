@@ -397,6 +397,57 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
   .contact-block .row i{margin-top:3px; width:18px; flex:none;}
   .contact-block b{display:block; color:var(--dark);}
 
+  /* ---------- catálogo de productos ---------- */
+  .catalog{background:var(--paper-2);}
+  .catalog .head{
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:24px; flex-wrap:wrap; margin-bottom:28px;
+  }
+  .catalog h2{font-size:clamp(30px,4vw,44px); max-width:16ch;}
+  .catalog .head p{margin-top:10px; color:var(--ink-soft); font-size:16px; max-width:54ch;}
+  .catalog .count{
+    font-family:'Inter',sans-serif; font-size:11.5px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--orange);
+    border:1px solid var(--orange); padding:7px 13px; border-radius:999px; white-space:nowrap;
+  }
+  .filters{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px;}
+  .filter-btn{
+    font-family:'Inter',sans-serif; font-size:13.5px; font-weight:600;
+    padding:9px 16px; border-radius:3px; border:1px solid var(--steel);
+    background:var(--paper); color:var(--ink-soft); cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .filter-btn:hover{border-color:var(--dark); color:var(--dark);}
+  .filter-btn.active{background:var(--dark); border-color:var(--dark); color:var(--white);}
+  .product-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .product-card{
+    background:var(--paper); border:1px solid var(--steel); border-radius:3px;
+    overflow:hidden; display:flex; flex-direction:column;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .product-card:hover{transform:translateY(-3px); box-shadow:0 12px 28px rgba(28,32,36,.12);}
+  .product-thumb{
+    height:210px; background:#fff; display:flex; align-items:center;
+    justify-content:center; padding:16px; overflow:hidden;
+  }
+  .product-thumb img{width:100%; height:100%; object-fit:contain;}
+  .product-body{padding:18px; display:flex; flex-direction:column; gap:8px; flex:1;}
+  .product-brand{
+    font-family:'Inter',sans-serif; font-size:11px; font-weight:700;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--orange);
+  }
+  .product-body h3{
+    font-family:'Inter',sans-serif; text-transform:none; letter-spacing:0;
+    font-weight:700; font-size:16px; line-height:1.3; color:var(--dark);
+  }
+  .product-body p{font-size:13.5px; color:var(--ink-soft); line-height:1.55; flex:1;}
+  .product-action{
+    margin-top:6px; font-size:13px; font-weight:700; color:var(--dark);
+    text-decoration:none; display:inline-flex; align-items:center; gap:7px;
+  }
+  .product-action:hover{color:var(--orange);}
+  .catalog-note{margin-top:22px; font-size:13px; color:var(--ink-soft);}
+
   /* ---------- mapa / cómo llegar ---------- */
   .map-section{background:var(--paper-2);}
   .map-section .grid{
@@ -444,6 +495,7 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
     .tag-grid{grid-template-columns:repeat(2, 1fr);}
     .compare-row{grid-template-columns:1fr;}
     .compare-row.head .cell.away{display:none;}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
   }
   @media (max-width: 640px){
     nav.links{display:none;}
@@ -451,6 +503,8 @@ src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
     section{padding:56px 0;}
     .hero .wrap{padding:44px 20px 48px;}
     .map-frame iframe{height:280px;}
+    .product-grid{grid-template-columns:1fr;}
+    .product-thumb{height:220px;}
   }
 </style>
 
@@ -656,6 +710,129 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- CATÁLOGO (muestra de productos) -->
+  <section class="catalog" id="catalogo">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Productos para tu obra</h2>
+          <p>Una muestra de lo que encontrarás en Ferretería A&amp;M: pinturas, sanitarios y mallas. Consulta disponibilidad y valores en la tienda.</p>
+        </div>
+        <span class="count">Muestra · 9 productos</span>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrar productos por categoría">
+        <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+        <button class="filter-btn" type="button" data-filter="pinturas">Pinturas</button>
+        <button class="filter-btn" type="button" data-filter="sanitarios">Sanitarios</button>
+        <button class="filter-btn" type="button" data-filter="mallas">Mallas</button>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/antioxido-sipa.jpg" alt="Antióxido maestranza Sipa, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sipa</span>
+            <h3>Antióxido maestranza Sipa, 1 gl</h3>
+            <p>Previene la corrosión de fierros y aceros antes de pintar. Ideal para rejas, perfiles, terrazas y marcos.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Anti%C3%B3xido%20maestranza%20Sipa%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/latex-passol.jpg" alt="Látex extracubriente Passol, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Passol</span>
+            <h3>Látex extracubriente Passol, 1 gl</h3>
+            <p>Pintura base agua de alto rendimiento, ideal para interiores y exteriores.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20L%C3%A1tex%20extracubriente%20Passol%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/carbolineo-quimica-universal.jpg" alt="Carbolíneo Química Universal, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Química Universal</span>
+            <h3>Carbolíneo Química Universal, 1 gl</h3>
+            <p>Protector de madera contra humedad, hongos, termitas y putrefacción.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Carbol%C3%ADneo%20Qu%C3%ADmica%20Universal%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/esmalte-cereluxe.jpg" alt="Esmalte sintético Cereluxe Ultra, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Ceresita</span>
+            <h3>Esmalte sintético Cereluxe Ultra, 1 gl</h3>
+            <p>Terminación brillante para madera y metales, en interiores y exteriores.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Esmalte%20sint%C3%A9tico%20Cereluxe%20Ultra%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/pintura-techos-acrizinc.jpg" alt="Pintura para techos Acrizinc, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sipa</span>
+            <h3>Pintura para techos Acrizinc, 1 gl</h3>
+            <p>Pintura acrílica para proteger techos y muros de acero galvanizado, zincalum y fibrocemento.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Pintura%20para%20techos%20Acrizinc%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="sanitarios">
+          <div class="product-thumb"><img src="assets/productos/tina-bano-blanca.jpg" alt="Tina de baño blanca 1,50 m × 0,70 m" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sanitarios</span>
+            <h3>Tina de baño blanca 1,50 m × 0,70 m</h3>
+            <p>Forma rectangular y diseño ergonómico para renovar tu baño con comodidad y seguridad.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Tina%20de%20ba%C3%B1o%20blanca%201%2C50%20m%20%C3%97%200%2C70%20m%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="sanitarios">
+          <div class="product-thumb"><img src="assets/productos/receptaculo.jpg" alt="Receptáculo 0,70 m × 0,70 m" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sanitarios</span>
+            <h3>Receptáculo 0,70 m × 0,70 m</h3>
+            <p>Estilo contemporáneo en blanco, diseñado para comodidad y seguridad.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Recept%C3%A1culo%200%2C70%20m%20%C3%97%200%2C70%20m%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="mallas">
+          <div class="product-thumb"><img src="assets/productos/malla-raschel.jpg" alt="Malla Raschel 80% — 2,10 m de alto" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Mallas</span>
+            <h3>Malla Raschel 80% — 2,10 m de alto</h3>
+            <p>Da sombra y privacidad en jardines, terrazas y áreas que necesitan protección solar.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Malla%20Raschel%2080%25%20%E2%80%94%202%2C10%20m%20de%20alto%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="mallas">
+          <div class="product-thumb"><img src="assets/productos/malla-gallinero.jpg" alt="Rollo malla gallinero 1,0 m × 50 m" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Mallas</span>
+            <h3>Rollo malla gallinero 1,0 m × 50 m</h3>
+            <p>Para proyectos artesanales y protección de plantas contra conejos, perros y gatos.</p>
+            <a class="product-action" href="https://wa.me/56976692998?text=Hola%2C%20%C2%BFtienen%20disponible%20Rollo%20malla%20gallinero%201%2C0%20m%20%C3%97%2050%20m%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+      </div>
+      <p class="catalog-note">Productos de ejemplo tomados del catálogo publicado por Ferretería A&amp;M. Los precios se consultan directamente en la tienda.</p>
+    </div>
+  </section>
+
   <!-- FINAL CTA -->
   <section class="final-cta" id="contacto">
     <div class="wrap">
@@ -717,6 +894,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (function(){
   const nav=document.getElementById('navActions');
   fetch((window.API_BASE||'')+'/api/auth/me',{credentials:'include'}).then(function(r){return r.json();}).then(function(d){if(d.ok&&d.user){nav.innerHTML='<div class="profile-wrap"><button class="profile-btn" id="pb"><i class="fa-solid fa-user"></i> Mi perfil <i class="fa-solid fa-chevron-down"></i></button><div class="profile-menu" id="pm"><a href="#top"><i class="fa-solid fa-box"></i> Mis pedidos</a><a href="#top"><i class="fa-solid fa-id-card"></i> Mi cuenta</a><div class="divider"></div><button id="lo"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button></div></div><a class="btn-whatsapp" href="https://wa.me/56900000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>';document.getElementById('pb').onclick=function(e){e.stopPropagation();document.getElementById('pm').classList.toggle('open');};document.addEventListener('click',function(){document.getElementById('pm').classList.remove('open');});document.getElementById('lo').onclick=function(){fetch((window.API_BASE||'')+'/api/auth/logout',{method:'POST',credentials:'include'}).then(function(){location.reload();});};}}).catch(function(){});
+  var filterBtns=document.querySelectorAll('.filter-btn');
+  var productCards=document.querySelectorAll('.product-card');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      filterBtns.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      var f=btn.getAttribute('data-filter');
+      productCards.forEach(function(card){
+        card.style.display=(f==='todos'||card.getAttribute('data-category')===f)?'':'none';
+      });
+    });
+  });
 })();
   var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
 </script>
