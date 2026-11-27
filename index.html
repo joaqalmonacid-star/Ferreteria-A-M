@@ -1,13 +1,43 @@
 ﻿<!DOCTYPE html>
 <html lang="es-CL">
 <head>
-  <!-- Google Tag Manager -->
+<meta name="google-site-verification" content="080s4XyjwneRNgrOGh7ERaHyd_q7Rw4uHvyebABF4Vg">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5LPT6KPC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8EHYTLMPQL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<!-- End Google Tag Manager -->
+  gtag('config', 'G-8EHYTLMPQL');
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1809302957019599');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1809302957019599&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FerreterÃ­a A&M â€” Calbuco | El material listo para tu prÃ³xima faena</title>
-<meta name="description" content="FerreterÃ­a A&M abastece a maestros de Calbuco con stock permanente, crÃ©dito de confianza y atenciÃ³n que conoce tu obra.">
+<title>Ferretería A&M — Calbuco | El material listo para tu faena </title>
+<meta name="description" content="Ferretería A&M abastece a maestros de Calbuco con stock permanente, crédito de confianza y atención que conoce tu obra.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -368,6 +398,84 @@
   .contact-block .row i{margin-top:3px; width:18px; flex:none;}
   .contact-block b{display:block; color:var(--dark);}
 
+  /* ---------- catálogo de productos ---------- */
+  .catalog{background:var(--paper-2);}
+  .catalog .head{
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:24px; flex-wrap:wrap; margin-bottom:28px;
+  }
+  .catalog h2{font-size:clamp(30px,4vw,44px); max-width:16ch;}
+  .catalog .head p{margin-top:10px; color:var(--ink-soft); font-size:16px; max-width:54ch;}
+  .catalog .count{
+    font-family:'Inter',sans-serif; font-size:11.5px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--orange);
+    border:1px solid var(--orange); padding:7px 13px; border-radius:999px; white-space:nowrap;
+  }
+  .filters{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px;}
+  .filter-btn{
+    font-family:'Inter',sans-serif; font-size:13.5px; font-weight:600;
+    padding:9px 16px; border-radius:3px; border:1px solid var(--steel);
+    background:var(--paper); color:var(--ink-soft); cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .filter-btn:hover{border-color:var(--dark); color:var(--dark);}
+  .filter-btn.active{background:var(--dark); border-color:var(--dark); color:var(--white);}
+  .product-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .product-card{
+    background:var(--paper); border:1px solid var(--steel); border-radius:3px;
+    overflow:hidden; display:flex; flex-direction:column;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .product-card:hover{transform:translateY(-3px); box-shadow:0 12px 28px rgba(28,32,36,.12);}
+  .product-thumb{
+    height:210px; background:#fff; display:flex; align-items:center;
+    justify-content:center; padding:16px; overflow:hidden;
+  }
+  .product-thumb img{width:100%; height:100%; object-fit:contain;}
+  .product-body{padding:18px; display:flex; flex-direction:column; gap:8px; flex:1;}
+  .product-brand{
+    font-family:'Inter',sans-serif; font-size:11px; font-weight:700;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--orange);
+  }
+  .product-body h3{
+    font-family:'Inter',sans-serif; text-transform:none; letter-spacing:0;
+    font-weight:700; font-size:16px; line-height:1.3; color:var(--dark);
+  }
+  .product-body p{font-size:13.5px; color:var(--ink-soft); line-height:1.55; flex:1;}
+  .product-action{
+    margin-top:6px; font-size:13px; font-weight:700; color:var(--dark);
+    text-decoration:none; display:inline-flex; align-items:center; gap:7px;
+  }
+  .product-action:hover{color:var(--orange);}
+  .catalog-note{margin-top:22px; font-size:13px; color:var(--ink-soft);}
+
+  /* ---------- mapa / cómo llegar ---------- */
+  .map-section{background:var(--paper-2);}
+  .map-section .grid{
+    display:grid; grid-template-columns:0.8fr 1.2fr; gap:40px; align-items:center;
+  }
+  .map-section h2{font-size:clamp(28px,3.6vw,42px); max-width:14ch;}
+  .map-section .lead{margin-top:14px; font-size:16.5px; color:var(--ink-soft); max-width:42ch;}
+  .map-address{
+    margin-top:22px; display:flex; gap:12px; align-items:flex-start;
+    font-size:16.5px; color:var(--ink-soft);
+  }
+  .map-address i{color:var(--orange); margin-top:4px; width:20px; flex:none;}
+  .map-address b{display:block; color:var(--dark); font-size:18px;}
+  .map-section .btn-outline{
+    display:inline-flex; align-items:center; gap:8px; margin-top:24px;
+    padding:12px 20px; border:1px solid var(--dark); border-radius:3px;
+    color:var(--dark); text-decoration:none; font-weight:600; font-size:14.5px;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .map-section .btn-outline:hover{background:var(--dark); color:var(--white);}
+  .map-frame{
+    border:1px solid var(--steel); background:var(--paper);
+    box-shadow:0 10px 30px rgba(28,32,36,0.10);
+    border-radius:3px; overflow:hidden;
+  }
+  .map-frame iframe{display:block; width:100%; height:360px; border:0;}
+
   /* ---------- footer ---------- */
   footer.site{
     background:var(--dark); color:#9AA3AC; padding:40px 0 28px; font-size:13.5px;
@@ -383,42 +491,27 @@
   @media (max-width: 920px){
     .hero .wrap{grid-template-columns:1fr; padding-top:52px;}
     .hero-art{max-width:340px; margin:0 auto;}
-    .pain .grid, .trust .grid, .final-cta .wrap{grid-template-columns:1fr;}
+    .pain .grid, .trust .grid, .final-cta .wrap, .map-section .grid{grid-template-columns:1fr;}
     .contact-block{border-left:none; padding-left:0; border-top:2px solid rgba(28,32,36,0.25); padding-top:24px;}
     .tag-grid{grid-template-columns:repeat(2, 1fr);}
     .compare-row{grid-template-columns:1fr;}
     .compare-row.head .cell.away{display:none;}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
   }
   @media (max-width: 640px){
     nav.links{display:none;}
     .tag-grid{grid-template-columns:1fr;}
     section{padding:56px 0;}
     .hero .wrap{padding:44px 20px 48px;}
+    .map-frame iframe{height:280px;}
+    .product-grid{grid-template-columns:1fr;}
+    .product-thumb{height:220px;}
   }
 </style>
 
 <style>
-.amodal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:9999}
-.amodal.open{display:flex}
-.amodal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.75)}
-.amodal-dialog{position:relative;background:#fff;width:min(560px,calc(100% - 24px));max-height:92vh;overflow-y:auto;border-radius:6px;box-shadow:0 40px 70px rgba(0,0,0,.6)}
-.amodal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#1C2024;color:#fff}
-.amodal-header h3{color:#fff;margin:0;font-size:26px;text-transform:none}
-.amodal-close{background:transparent;border:none;color:#C9CDD1;font-size:22px;cursor:pointer}
-.amodal-body{padding:22px 24px;display:flex;flex-direction:column;gap:14px}
-.amodal-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.amodal-field{display:flex;flex-direction:column;gap:6px}
-.amodal-field label{font-weight:600;font-size:13px}
-.amodal-field input{padding:10px 12px;border:1px solid #DADCD6;border-radius:3px;font-family:Inter,sans-serif}
-.amodal-footer{display:flex;gap:10px;justify-content:flex-end;padding:0 24px 22px}
-.amodal-btn{border:none;padding:11px 20px;border-radius:3px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif}
-.amodal-btn-primary{background:#D9622B;color:#fff}
-.amodal-btn-ghost{background:transparent;border:1px solid #DADCD6}
-.amodal-msg{font-size:13px}
-.amodal-msg.error{color:#B00020}
-.amodal-msg.success{color:#1B5E20}
-.amodal-note{font-size:12.5px;color:#54595E}
-.profile-wrap{position:relative}
+  /* ---------- menú de perfil (sesión iniciada) ---------- */
+  .profile-wrap{position:relative}
 .profile-btn{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;padding:10px 16px;border:1px solid #6C757D;border-radius:3px;cursor:pointer;font-family:Inter,sans-serif}
 .profile-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid #DADCD6;border-radius:6px;display:none;min-width:200px;box-shadow:0 20px 40px rgba(0,0,0,.25);z-index:10000}
 .profile-menu.open{display:block}
@@ -435,16 +528,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav">
     <a class="logo" href="#top">
       <span class="mark" aria-hidden="true"><i class="fa-solid fa-hammer"></i></span>
-      <span class="logo-text">FerreterÃ­a A&amp;M<span class="place">Calbuco</span></span>
+      <span class="logo-text">Ferretería A&amp;M<span class="place">Calbuco</span></span>
     </a>
-    <nav class="links" aria-label="NavegaciÃ³n principal">
-      <a href="#categorias">CategorÃ­as</a>
-      <a href="#por-que">Por quÃ© A&amp;M</a>
+    <nav class="links" aria-label="Navegación principal">
+      <a href="#categorias">Categorías</a>
+      <a href="#por-que">Por qué A&amp;M</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="nav-actions" id="navActions">
-      <button type="button" class="btn-auth" id="openLoginBtn">Iniciar sesiÃ³n</button>
-      <button type="button" class="btn-auth btn-auth-primary" id="openRegisterBtn">Registrarse</button>
+      <a class="btn-auth" href="login.html">Iniciar sesión</a>
+      <a class="btn-auth btn-auth-primary" href="registro.html">Registrarse</a>
       <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
@@ -458,14 +551,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="hero-eyebrow">FerreterÃ­a A&amp;M Â· Calbuco</span>
-        <h1>El material listo antes de que se enfrÃ­e la faena</h1>
-        <p class="lead">Stock permanente, crÃ©dito de confianza y una ferreterÃ­a que conoce tu obra. Para que no tengas que cruzar a Puerto Montt por un perno que te falta.</p>
+        <span class="hero-eyebrow">Ferretería A&amp;M · Calbuco</span>
+        <h1>El material listo antes de que se enfríe la faena</h1>
+        <p class="lead">Stock permanente, crédito de confianza y una ferretería que conoce tu obra. Para que no tengas que cruzar a Puerto Montt por un perno que te falta.</p>
         <div class="cta-row">
           <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> EscrÃ­benos por WhatsApp
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos por WhatsApp
           </a>
-          <a class="link-quiet" href="#categorias">Ver categorÃ­as</a>
+          <a class="link-quiet" href="#categorias">Ver categorías</a>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -484,22 +577,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap grid">
       <div>
         <div class="section-head" style="margin-bottom:22px;">
-          <h2 style="color:#fff;">Se acabÃ³ el material a media maÃ±ana</h2>
+          <h2 style="color:#fff;">Se acabó el material a media mañana</h2>
         </div>
-        <p class="lead-copy">Cruzar a Puerto Montt por un insumo que falta cuesta <strong>media jornada de obra</strong> â€” y un cliente que empieza a preguntarse si le cumplirÃ¡s el plazo. En Calbuco esa no es la Ãºnica opciÃ³n.</p>
+        <p class="lead-copy">Cruzar a Puerto Montt por un insumo que falta cuesta <strong>media jornada de obra</strong> — y un cliente que empieza a preguntarse si le cumplirás el plazo. En Calbuco esa no es la única opción.</p>
       </div>
       <ul class="checklist">
         <li>
           <i class="fa-solid fa-clock" aria-hidden="true"></i>
-          <span><b>Vuelves a la obra en minutos</b>Sin viaje, sin fila de mostrador, sin perder el dÃ­a por un solo perno.</span>
+          <span><b>Vuelves a la obra en minutos</b>Sin viaje, sin fila de mostrador, sin perder el día por un solo perno.</span>
         </li>
         <li>
           <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-          <span><b>CrÃ©dito de maestro a maestro</b>Fiado de confianza para quienes trabajan con nosotros hace aÃ±os.</span>
+          <span><b>Crédito de maestro a maestro</b>Fiado de confianza para quienes trabajan con nosotros hace años.</span>
         </li>
         <li>
           <i class="fa-solid fa-user-check" aria-hidden="true"></i>
-          <span><b>Te conocen a ti y tu obra</b>AsesorÃ­a tÃ©cnica real, no una respuesta genÃ©rica de mostrador grande.</span>
+          <span><b>Te conocen a ti y tu obra</b>Asesoría técnica real, no una respuesta genérica de mostrador grande.</span>
         </li>
       </ul>
     </div>
@@ -510,7 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
       <div class="section-head">
         <h2>Todo lo que tu obra necesita, en un solo lugar</h2>
-        <p>Desde la herramienta que se rompiÃ³ esta maÃ±ana hasta el material para terminar la pega del mes.</p>
+        <p>Desde la herramienta que se rompió esta mañana hasta el material para terminar la pega del mes.</p>
       </div>
       <div class="tag-grid">
         <article class="tag-card">
@@ -520,18 +613,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-          <h3>Herramientas elÃ©ctricas</h3>
-          <p>Taladros, esmeriles y equipos para avanzar mÃ¡s rÃ¡pido en terreno.</p>
+          <h3>Herramientas eléctricas</h3>
+          <p>Taladros, esmeriles y equipos para avanzar más rápido en terreno.</p>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
-          <h3>Fijaciones y pernerÃ­a</h3>
-          <p>Pernos, tornillos, tarugos y anclajes â€” al detalle, cuando los necesites.</p>
+          <h3>Fijaciones y pernería</h3>
+          <p>Pernos, tornillos, tarugos y anclajes — al detalle, cuando los necesites.</p>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-trowel-bricks" aria-hidden="true"></i>
-          <h3>Materiales de construcciÃ³n</h3>
-          <p>Cemento, Ã¡ridos, fierro y todo lo necesario para avanzar la obra gruesa.</p>
+          <h3>Materiales de construcción</h3>
+          <p>Cemento, áridos, fierro y todo lo necesario para avanzar la obra gruesa.</p>
         </article>
         <article class="tag-card">
           <i class="fa-solid fa-paint-roller" aria-hidden="true"></i>
@@ -541,7 +634,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <article class="tag-card">
           <i class="fa-solid fa-hard-hat" aria-hidden="true"></i>
           <h3>Seguridad y EPP</h3>
-          <p>Cascos, guantes y elementos de protecciÃ³n para trabajar tranquilo.</p>
+          <p>Cascos, guantes y elementos de protección para trabajar tranquilo.</p>
         </article>
       </div>
     </div>
@@ -557,31 +650,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="mark-quote" aria-hidden="true">&ldquo;</span>
           <blockquote>Con A&amp;M nunca he tenido que decirle a un cliente que hay que esperar.</blockquote>
         </div>
-        <figcaption><b>Maestro gasfÃ­ter</b>Calbuco</figcaption>
+        <figcaption><b>Maestro gasfíter</b>Calbuco</figcaption>
       </figure>
       <div>
         <div class="section-head" style="margin-bottom:8px;">
-          <h2>Por quÃ© los maestros de Calbuco eligen A&amp;M</h2>
+          <h2>Por qué los maestros de Calbuco eligen A&amp;M</h2>
         </div>
         <div class="reasons">
           <div class="reason">
             <span class="num">1</span>
             <div>
               <h3>Cumples el plazo que prometiste</h3>
-              <p>Stock permanente de lo esencial, para que ningÃºn cliente vea detenida tu obra por un insumo.</p>
+              <p>Stock permanente de lo esencial, para que ningún cliente vea detenida tu obra por un insumo.</p>
             </div>
           </div>
           <div class="reason">
             <span class="num">2</span>
             <div>
               <h3>Te ven como el maestro que resuelve</h3>
-              <p>Cada vez que no improvisas ni atrasas la pega, tu nombre suena mejor con el prÃ³ximo cliente.</p>
+              <p>Cada vez que no improvisas ni atrasas la pega, tu nombre suena mejor con el próximo cliente.</p>
             </div>
           </div>
           <div class="reason">
             <span class="num">3</span>
             <div>
-              <h3>AtenciÃ³n de quien conoce el oficio</h3>
+              <h3>Atención de quien conoce el oficio</h3>
               <p>Te asesoramos con el material correcto para tu faena, no solo con lo que hay en la vitrina.</p>
             </div>
           </div>
@@ -603,18 +696,141 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="cell home">Comprar en A&amp;M</div>
         </div>
         <div class="compare-row">
-          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Medio dÃ­a de obra perdido en el viaje</div>
+          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Medio día de obra perdido en el viaje</div>
           <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> Vuelves a la obra en menos de 30 minutos</div>
         </div>
         <div class="compare-row">
-          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Pago 100% bancarizado, sin excepciÃ³n</div>
-          <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> CrÃ©dito de confianza para maestros habituales</div>
+          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Pago 100% bancarizado, sin excepción</div>
+          <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> Crédito de confianza para maestros habituales</div>
         </div>
         <div class="compare-row">
-          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> AtenciÃ³n de mostrador, sin historial contigo</div>
+          <div class="cell away"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Atención de mostrador, sin historial contigo</div>
           <div class="cell home"><i class="fa-solid fa-check" aria-hidden="true"></i> Te conocen a ti, tu obra y lo que sueles necesitar</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO (muestra de productos) -->
+  <section class="catalog" id="catalogo">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Productos para tu obra</h2>
+          <p>Una muestra de lo que encontrarás en Ferretería A&amp;M: pinturas, sanitarios y mallas. Consulta disponibilidad y valores en la tienda.</p>
+        </div>
+        <span class="count">Muestra · 9 productos</span>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrar productos por categoría">
+        <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+        <button class="filter-btn" type="button" data-filter="pinturas">Pinturas</button>
+        <button class="filter-btn" type="button" data-filter="sanitarios">Sanitarios</button>
+        <button class="filter-btn" type="button" data-filter="mallas">Mallas</button>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/antioxido-sipa.jpg" alt="Antióxido maestranza Sipa, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sipa</span>
+            <h3>Antióxido maestranza Sipa, 1 gl</h3>
+            <p>Previene la corrosión de fierros y aceros antes de pintar. Ideal para rejas, perfiles, terrazas y marcos.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Anti%C3%B3xido%20maestranza%20Sipa%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/latex-passol.jpg" alt="Látex extracubriente Passol, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Passol</span>
+            <h3>Látex extracubriente Passol, 1 gl</h3>
+            <p>Pintura base agua de alto rendimiento, ideal para interiores y exteriores.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20L%C3%A1tex%20extracubriente%20Passol%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/carbolineo-quimica-universal.jpg" alt="Carbolíneo Química Universal, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Química Universal</span>
+            <h3>Carbolíneo Química Universal, 1 gl</h3>
+            <p>Protector de madera contra humedad, hongos, termitas y putrefacción.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Carbol%C3%ADneo%20Qu%C3%ADmica%20Universal%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/esmalte-cereluxe.jpg" alt="Esmalte sintético Cereluxe Ultra, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Ceresita</span>
+            <h3>Esmalte sintético Cereluxe Ultra, 1 gl</h3>
+            <p>Terminación brillante para madera y metales, en interiores y exteriores.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Esmalte%20sint%C3%A9tico%20Cereluxe%20Ultra%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="pinturas">
+          <div class="product-thumb"><img src="assets/productos/pintura-techos-acrizinc.jpg" alt="Pintura para techos Acrizinc, 1 gl" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sipa</span>
+            <h3>Pintura para techos Acrizinc, 1 gl</h3>
+            <p>Pintura acrílica para proteger techos y muros de acero galvanizado, zincalum y fibrocemento.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Pintura%20para%20techos%20Acrizinc%2C%201%20gl%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="sanitarios">
+          <div class="product-thumb"><img src="assets/productos/tina-bano-blanca.jpg" alt="Tina de baño blanca 1,50 m × 0,70 m" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sanitarios</span>
+            <h3>Tina de baño blanca 1,50 m × 0,70 m</h3>
+            <p>Forma rectangular y diseño ergonómico para renovar tu baño con comodidad y seguridad.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Tina%20de%20ba%C3%B1o%20blanca%201%2C50%20m%20%C3%97%200%2C70%20m%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="sanitarios">
+          <div class="product-thumb"><img src="assets/productos/receptaculo.jpg" alt="Receptáculo 0,70 m × 0,70 m" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Sanitarios</span>
+            <h3>Receptáculo 0,70 m × 0,70 m</h3>
+            <p>Estilo contemporáneo en blanco, diseñado para comodidad y seguridad.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Recept%C3%A1culo%200%2C70%20m%20%C3%97%200%2C70%20m%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="mallas">
+          <div class="product-thumb"><img src="assets/productos/malla-raschel.jpg" alt="Malla Raschel 80% — 2,10 m de alto" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Mallas</span>
+            <h3>Malla Raschel 80% — 2,10 m de alto</h3>
+            <p>Da sombra y privacidad en jardines, terrazas y áreas que necesitan protección solar.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Malla%20Raschel%2080%25%20%E2%80%94%202%2C10%20m%20de%20alto%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+        <article class="product-card" data-category="mallas">
+          <div class="product-thumb"><img src="assets/productos/malla-gallinero.jpg" alt="Rollo malla gallinero 1,0 m × 50 m" loading="lazy"></div>
+          <div class="product-body">
+            <span class="product-brand">Mallas</span>
+            <h3>Rollo malla gallinero 1,0 m × 50 m</h3>
+            <p>Para proyectos artesanales y protección de plantas contra conejos, perros y gatos.</p>
+            <a class="product-action" href="https://wa.me/56900000000?text=Hola%2C%20%C2%BFtienen%20disponible%20Rollo%20malla%20gallinero%201%2C0%20m%20%C3%97%2050%20m%3F" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar disponibilidad
+            </a>
+          </div>
+        </article>
+      </div>
+      <p class="catalog-note">Productos de ejemplo tomados del catálogo publicado por Ferretería A&amp;M. Los precios se consultan directamente en la tienda.</p>
     </div>
   </section>
 
@@ -622,18 +838,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="final-cta" id="contacto">
     <div class="wrap">
       <div>
-        <h2>Tu prÃ³xima obra no deberÃ­a esperar</h2>
-        <p>EscrÃ­benos y te confirmamos al tiro si tenemos lo que necesitas.</p>
+        <h2>Tu próxima obra no debería esperar</h2>
+        <p>Escríbenos y te confirmamos al tiro si tenemos lo que necesitas.</p>
         <div style="margin-top:26px;">
           <a class="btn-whatsapp" href="https://wa.me/56900000000?text=Hola%2C%20necesito%20materiales%20para%20una%20obra" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> EscrÃ­benos por WhatsApp
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos por WhatsApp
           </a>
         </div>
       </div>
       <div class="contact-block">
-        <div class="row"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><b>FerreterÃ­a A&amp;M</b>Sector centro, Calbuco</span></div>
-        <div class="row"><i class="fa-solid fa-clock" aria-hidden="true"></i><span><b>Horario</b>Lunes a sÃ¡bado, 8:30 a 19:00</span></div>
-        <div class="row"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><b>TelÃ©fono</b>+56 9 0000 0000</span></div>
+        <div class="row"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><b>Ferretería A&amp;M</b>Federico Errázuriz N° 206, Calbuco</span></div>
+        <div class="row"><i class="fa-solid fa-clock" aria-hidden="true"></i><span><b>Horario</b>Lunes a sábado, 8:30 a 19:00</span></div>
+        <div class="row"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><b>Teléfono</b>+56 9 0000 0000</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA / CÓMO LLEGAR -->
+  <section class="map-section" id="como-llegar">
+    <div class="wrap grid">
+      <div>
+        <h2>Cómo llegar</h2>
+        <p class="lead">Estamos en el centro de Calbuco, a pasos de la plaza. Ven a vernos cuando necesites materiales para tu obra.</p>
+        <div class="map-address">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span><b>Ferretería A&amp;M</b>Federico Errázuriz N° 206, Calbuco</span>
+        </div>
+        <a class="btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Federico%20Err%C3%A1zuriz%20206%2C%20Calbuco" target="_blank" rel="noopener">
+          <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Cómo llegar
+        </a>
+      </div>
+      <div class="map-frame">
+        <iframe
+          title="Mapa de Ferretería A&M en Federico Errázuriz N° 206, Calbuco"
+          src="https://www.google.com/maps?q=Federico%20Err%C3%A1zuriz%20206%2C%20Calbuco&amp;output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -643,44 +882,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site">
   <div class="wrap">
     <span>© <span id="year"></span> Ferretería A&amp;M, Calbuco.</span>
-    <a href="https://wa.me/56900000000" target="_blank" rel="noopener">EscrÃ­benos por WhatsApp</a>
+    <a href="https://wa.me/56900000000" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
   </div>
   <div class="wrap">
-    <p class="foot-note">DirecciÃ³n, telÃ©fono y horario de referencia â€” reemplazar por los datos reales del local antes de publicar.</p>
+    <p class="foot-note">Teléfono y horario de referencia — reemplazar por los datos reales del local antes de publicar.</p>
   </div>
 </footer>
 
 
-<!-- AUTH MODALS -->
-<div class="amodal" id="loginModal"><div class="amodal-backdrop" data-close="login"></div><div class="amodal-dialog"><header class="amodal-header"><h3>Iniciar sesiÃ³n</h3><button class="amodal-close" data-close="login"><i class="fa-solid fa-xmark"></i></button></header><div class="amodal-body"><div class="amodal-field"><label>Correo electrÃ³nico</label><input id="loginCorreo" type="email"></div><div class="amodal-field"><label>ContraseÃ±a</label><input id="loginPass" type="password"></div><div class="amodal-msg" id="loginMsg"></div></div><footer class="amodal-footer"><button class="amodal-btn amodal-btn-ghost" data-close="login">Cancelar</button><button class="amodal-btn amodal-btn-primary" id="loginSubmit">Iniciar sesiÃ³n</button></footer></div></div>
-<div class="amodal" id="registerModal"><div class="amodal-backdrop" data-close="register"></div><div class="amodal-dialog"><header class="amodal-header"><h3>Crear cuenta</h3><button class="amodal-close" data-close="register"><i class="fa-solid fa-xmark"></i></button></header><div class="amodal-body"><div class="amodal-row"><div class="amodal-field"><label>Nombres</label><input id="regNombres"></div><div class="amodal-field"><label>Apellidos</label><input id="regApellidos"></div></div><div class="amodal-field"><label>Correo electrÃ³nico</label><input id="regCorreo" type="email"></div><div class="amodal-row"><div class="amodal-field"><label>NÃºmero celular</label><input id="regCelular"></div><div class="amodal-field"><label>Comuna</label><input id="regComuna"></div></div><div class="amodal-row"><div class="amodal-field"><label>ContraseÃ±a</label><input id="regPass" type="password"></div><div class="amodal-field"><label>Confirmar contraseÃ±a</label><input id="regPass2" type="password"></div></div><div class="amodal-msg" id="registerMsg"></div><p class="amodal-note">Te enviaremos un correo de confirmaciÃ³n con: "Tu cuenta ha sido creada con Ã©xito y serÃ¡ notificado cuando la pÃ¡gina empiece a funcionar." TambiÃ©n enviaremos tus datos a joaq.almonacid@gmail.com.</p></div><footer class="amodal-footer"><button class="amodal-btn amodal-btn-ghost" data-close="register">Cancelar</button><button class="amodal-btn amodal-btn-primary" id="registerSubmit">Crear cuenta</button></footer></div></div>
+<script src="config.js"></script>
 <script>
 (function(){
   const nav=document.getElementById('navActions');
-  document.getElementById('openLoginBtn').onclick=function(){document.getElementById('loginModal').classList.add('open');};
-  document.getElementById('openRegisterBtn').onclick=function(){document.getElementById('registerModal').classList.add('open');};
-  document.querySelectorAll('[data-close=login]').forEach(function(x){x.onclick=function(){document.getElementById('loginModal').classList.remove('open');};});
-  document.querySelectorAll('[data-close=register]').forEach(function(x){x.onclick=function(){document.getElementById('registerModal').classList.remove('open');};});
-  fetch('/api/auth/me',{credentials:'include'}).then(function(r){return r.json();}).then(function(d){if(d.ok&&d.user){nav.innerHTML='<div class="profile-wrap"><button class="profile-btn" id="pb"><i class="fa-solid fa-user"></i> Mi perfil <i class="fa-solid fa-chevron-down"></i></button><div class="profile-menu" id="pm"><a href="#top"><i class="fa-solid fa-box"></i> Mis pedidos</a><a href="#top"><i class="fa-solid fa-id-card"></i> Mi cuenta</a><div class="divider"></div><button id="lo"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesiÃ³n</button></div></div><a class="btn-whatsapp" href="https://wa.me/56900000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>';document.getElementById('pb').onclick=function(e){e.stopPropagation();document.getElementById('pm').classList.toggle('open');};document.addEventListener('click',function(){document.getElementById('pm').classList.remove('open');});document.getElementById('lo').onclick=function(){fetch('/api/auth/logout',{method:'POST',credentials:'include'}).then(function(){location.reload();});};}}).catch(function(){});
-  document.getElementById('loginSubmit').onclick=function(){
-    var m=document.getElementById('loginMsg'); m.textContent=''; m.className='amodal-msg';
-    var c=document.getElementById('loginCorreo').value.trim(), p=document.getElementById('loginPass').value;
-    if(!c||!p){m.textContent='Completa correo y contraseÃ±a';m.classList.add('error');return;}
-    fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({correo:c,password:p})}).then(function(r){return r.json();}).then(function(d){if(d.ok){document.getElementById('loginModal').classList.remove('open');location.reload();}else{m.textContent=d.error||'Error';m.classList.add('error');}});
-  };
-  document.getElementById('registerSubmit').onclick=function(){
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'envio_formulario' });
-    var m=document.getElementById('registerMsg'); m.textContent=''; m.className='amodal-msg';
-    var n=document.getElementById('regNombres').value.trim(),a=document.getElementById('regApellidos').value.trim(),c=document.getElementById('regCorreo').value.trim(),cel=document.getElementById('regCelular').value.trim(),com=document.getElementById('regComuna').value.trim(),p=document.getElementById('regPass').value,p2=document.getElementById('regPass2').value;
-    if(!n||!a||!c||!cel||!com||!p||!p2){m.textContent='Completa todos los campos';m.classList.add('error');return;}
-    if(p!==p2){m.textContent='Las contraseÃ±as no coinciden';m.classList.add('error');return;}
-    if(p.length<6){m.textContent='MÃ­nimo 6 caracteres';m.classList.add('error');return;}
-    fetch('/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({nombres:n,apellidos:a,correo:c,celular:cel,comuna:com,password:p})}).then(function(r){return r.json();}).then(function(d){if(d.ok){m.textContent='Â¡Registro exitoso!';m.classList.add('success');setTimeout(function(){document.getElementById('registerModal').classList.remove('open');location.reload();},1200);}else{m.textContent=d.error||'Error';m.classList.add('error');}});
-  };
+  fetch((window.API_BASE||'')+'/api/auth/me',{credentials:'include'}).then(function(r){return r.json();}).then(function(d){if(d.ok&&d.user){nav.innerHTML='<div class="profile-wrap"><button class="profile-btn" id="pb"><i class="fa-solid fa-user"></i> Mi perfil <i class="fa-solid fa-chevron-down"></i></button><div class="profile-menu" id="pm"><a href="#top"><i class="fa-solid fa-box"></i> Mis pedidos</a><a href="#top"><i class="fa-solid fa-id-card"></i> Mi cuenta</a><div class="divider"></div><button id="lo"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button></div></div><a class="btn-whatsapp" href="https://wa.me/56900000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>';document.getElementById('pb').onclick=function(e){e.stopPropagation();document.getElementById('pm').classList.toggle('open');};document.addEventListener('click',function(){document.getElementById('pm').classList.remove('open');});document.getElementById('lo').onclick=function(){fetch((window.API_BASE||'')+'/api/auth/logout',{method:'POST',credentials:'include'}).then(function(){location.reload();});};}}).catch(function(){});
+  var filterBtns=document.querySelectorAll('.filter-btn');
+  var productCards=document.querySelectorAll('.product-card');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      filterBtns.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      var f=btn.getAttribute('data-filter');
+      productCards.forEach(function(card){
+        card.style.display=(f==='todos'||card.getAttribute('data-category')===f)?'':'none';
+      });
+    });
+  });
 })();
   var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
-})();
 </script>
 
 </body>
