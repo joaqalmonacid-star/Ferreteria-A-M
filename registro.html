@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5LPT6KPC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
   <title>Registro - Ferretería A&amp;M</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,6 +129,10 @@
   </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LPT6KPC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <header>
     <div class="header-inner">
       <a class="logo" href="index.html">
@@ -197,6 +205,8 @@
 
     form.addEventListener('submit',function(e){
       e.preventDefault();
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'envio_formulario' });
       setMsg('');
       var n=document.getElementById('nombres').value.trim(),
           a=document.getElementById('apellidos').value.trim(),
